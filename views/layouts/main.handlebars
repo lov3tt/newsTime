@@ -3,49 +3,48 @@
 
 <head>
   <meta charset="UTF-8">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Latest Science News</title>
-
+  <!-- <style>
+      body { background-color: #F2F6D0 }
+      #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 60%;
+        height: 700px;
+      }
+      #notes {
+        float: right;
+        width: 30%;
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #FCF5C7;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+    </style> -->
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Mongo Scraper</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/saved">Saved Articles</a></li>
-
-
-          <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Scrape Articles!</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>The Scraper</h4>
-      <p>Do you want to scrape?</p>
-    </div>
-    <div class="modal-footer">
-      <a href="/scrape" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
-      <a href="/" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-    </div>
-  </div>
-      </ul>
-    </div>
-  </nav>
-    <div class="parallax-container">
-      <div class="parallax"><img src="/assets/img/photo-1503694978374-8a2fa686963a.jpg"></div>
-    </div>
-
-
   {{{body}}}
-  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/assets/js/app.js"></script>
 </body>
 

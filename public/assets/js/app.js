@@ -3,7 +3,7 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
 
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" +"<strong>" +  data[i].title +"</strong>" + "<br>" + "<img src =" +  data[i].img + ">" + "<br>" + data[i].summary + "<br>" +"<a href= https://www.livescience.com"+ data[i].link + ">" + "Read More.. </a>")
+    $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br>" + "<img src =" +  data[i].img + ">" + "<br>" + data[i].summary + "<br>" +"<a href= https://www.livescience.com"+ data[i].link + ">" + "Read More.. </a>")
     $("#title").append("<p data-id='" + data[i]._id + "'>" + data[i].title )
     $("#img").append("<p data-id='" + data[i]._id + "'>" + "<img src =" +  data[i].img + ">" )
     $("#summary").append("<p data-id='" + data[i]._id + "'>" + data[i].summary )
@@ -28,7 +28,7 @@ $(document).on("click", "p", function() {
     .then(function(data) {
       console.log(data);
       // The title of the article
-      $("#notes").append("<h4>" + data.title + "</h4>");
+      $("#notes").append("<h2>" + data.title + "</h2>");
       // An input to enter a new title
       $("#notes").append("<input id='titleinput' name='title' >");
       // A textarea to add a new note body
@@ -73,37 +73,4 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.parallax');
-  var instances = M.Parallax.init(elems, options);
-});
-
-// Or with jQuery
-
-$(document).ready(function(){
-  $('.parallax').parallax();
-});
-      
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.slider');
-  var instances = M.Slider.init(elems, options);
-});
-
-// Or with jQuery
-
-$(document).ready(function(){
-  $('.slider').slider();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, options);
-});
-
-// Or with jQuery
-
-$(document).ready(function(){
-  $('.modal').modal();
 });
