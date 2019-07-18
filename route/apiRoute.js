@@ -34,12 +34,14 @@ router.get("/scrape", function (req, res) {
           .find("img")
           .attr("src")
   
+        
   
         // Create a new Article using the `result` object built from scraping
         db.Article.create(result)
           .then(function (dbArticle) {
             // View the added result in the console
             console.log(dbArticle);
+           
           })
           .catch(function (err) {
             // If an error occurred, log it
@@ -48,7 +50,7 @@ router.get("/scrape", function (req, res) {
       });
   
       // Send a message to the client
-      res.send("Scrape Complete");
+      res.render("/");
     });
   });
   
@@ -63,6 +65,22 @@ router.get("/scrape", function (req, res) {
       .catch(function (err) {
         // If an error occurred, send it to the client
         res.json(err);
+      });
+  });
+
+  router.get("/saved", function (req, res) {
+    // Grab every document in the Articles collection
+    db.Article.find({note})
+      .then(function () {
+
+        res.render("index", {note});
+       
+      })
+      .catch(function (err) {
+        // If an error occurred, send it to the client
+        res.json(err);
+       
+        
       });
   });
   
