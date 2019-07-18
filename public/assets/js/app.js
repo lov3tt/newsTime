@@ -4,7 +4,10 @@ $.getJSON("/articles", function(data) {
   for (var i = 0; i < data.length; i++) {
 
     $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br>" + "<img src =" +  data[i].img + ">" + "<br>" + data[i].summary + "<br>" +"<a href= https://www.livescience.com"+ data[i].link + ">" + "Read More.. </a>")
-    
+    $("#title").append("<p data-id='" + data[i]._id + "'>" + data[i].title )
+    $("#img").append("<p data-id='" + data[i]._id + "'>" + "<img src =" +  data[i].img + ">" )
+    $("#summary").append("<p data-id='" + data[i]._id + "'>" + data[i].summary )
+    $("#link").append("<p data-id='" + data[i]._id + "'>" + "<a href= https://www.livescience.com"+ data[i].link + ">" + "Read More.. </a>" )
   }
 });
 
