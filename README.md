@@ -5,7 +5,7 @@
 >Link to Heroku  https://desolate-woodland-49369.herokuapp.com/
 
 
-![IMG](/assets/img/news.png)
+![IMG](/public/assets/img/news.png)
 
 >News Scraper app
 
