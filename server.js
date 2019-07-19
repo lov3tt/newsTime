@@ -36,9 +36,13 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/testTime", {
-  useNewUrlParser: true
-});
+// mongoose.connect("mongodb://localhost/testTime", {
+//   useNewUrlParser: true
+// });
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);
 
 // Routes
 var routes = require("./route/apiRoute")
